@@ -9,7 +9,7 @@ const Navbar = () => {
     }
     
     return(
-        <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white" id="navbar">
+        <div className="flex justify-around items-center h-24 max-w-[1240px] mx-auto px-4 text-white" id="navbar">
             <span className="p-4" id="ring-icon">
                 <svg className="h-12 w-12" fill="#FFFF00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
                     <g>
