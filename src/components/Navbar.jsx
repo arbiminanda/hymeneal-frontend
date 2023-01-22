@@ -2,14 +2,14 @@ import React, {useState} from "react"
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false)
+    const [nav, setNav] = useState(true)
 
     const handleNav = () => {
         setNav(!nav)
     }
     
     return(
-        <div className="flex justify-around items-center h-24 max-w-[1240px] mx-auto px-4 text-white" id="navbar">
+        <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white" id="navbar">
             <span className="p-4" id="ring-icon">
                 <svg className="h-12 w-12" fill="#FFFF00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
                     <g>
@@ -32,15 +32,15 @@ const Navbar = () => {
                 <li className="p-4" id="narration">Narration</li>
                 <li className="p-4" id="ceremonial">Ceremonial</li>
                 <li className="p-4" id="moments">Moments</li>
-                <li className="p-4" id="felicitation">Felicitation</li>
                 <li className="p-4" id="confirmation">Confirmation</li>
+                <li className="p-4" id="felicitation">Felicitation</li>
             </ul>
             <div onClick={handleNav} className="block md:hidden">
                 {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
             </div>
-            <div className={!nav ? "fixed left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-[#000300] ease-in-out duration-500" : "fixed left-[-100%]"}>
+            <div className={!nav ? "fixed left-0 top-0 w-[40%] border-r border-r-gray-900 h-full bg-[#000300] ease-in-out duration-500" : "fixed left-[-100%]"}>
             <div className="flex items-center">
-                <span className="p-4" id="ring-icon">
+                <span className="p-2" id="ring-icon">
                     <svg className="h-12 w-12" fill="#FFFF00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
                         <g>
                             <g>
@@ -56,7 +56,7 @@ const Navbar = () => {
                         </g>
                     </svg>
                 </span>
-                <h1 className="p-4 w-full text-3xl font-bold text-[#00df9a] m-4" id="title">HYMENEAL</h1>
+                <h1 className="p-2 w-full text-2xl font-bold text-[#00df9a] m-4" id="title">HYMENEAL</h1>
             </div>
                 <ul className="uppercase p-4">
                     <li className="p-4 border-b border-gray-600" id="home">Home</li>
