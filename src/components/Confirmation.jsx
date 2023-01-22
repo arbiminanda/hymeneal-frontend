@@ -37,7 +37,7 @@ const Confirmation = () => {
                     <label htmlFor="greetings" className="text-white form-label md:text-xl sm:text-xl text-xl font-bold nd:py-6">Greetings:</label>
                 </div>
                 <div className="form-group h-10">
-                    <input className="p-6 form-control w-[100%] float-right" onChange={onChangeHandler} name="greetings" placeholder="Your Greetings"/>
+                    <textarea className="p-2 form-control w-[100%] float-right" onChange={onChangeHandler} name="greetings" placeholder="Your Greetings"/>
                 </div>
                 <div className="form-group h-10 mt-10">
                     <label htmlFor="presences" className="text-white form-label md:text-xl sm:text-xl text-xl font-bold nd:py-6">Presences:</label>
