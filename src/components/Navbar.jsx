@@ -10,7 +10,7 @@ const Navbar = () => {
     }
 
     return(
-        <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white" id="navbar">
+        <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white navbar" id="navbar">
             <span className="p-4" id="ring-icon">
                 <svg className="h-12 w-12" fill="#FFFF00" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
                     <g>
@@ -30,7 +30,7 @@ const Navbar = () => {
             <h1 className="p-4 w-full text-3xl font-bold text-[#00df9a]" id="title">HYMENEAL</h1>
             <ul className="p-4 hidden md:flex">
                 <li className="p-4" id="home">
-                    <Link to="hero" spy={true} smooth={true} offset={0} duration={100}>Home</Link>
+                    <Link to="navbar" spy={true} smooth={true} offset={0} duration={100}>Home</Link>
                 </li>
                 <li className="p-4" id="narration">Narration</li>
                 <li className="p-4" id="ceremonial">Ceremonial</li>
@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className={!nav ? "fixed left-0 top-0 w-[50%] border-r border-r-gray-900 h-full bg-[#000300] ease-in-out duration-500" : "fixed left-[-100%]"}>
                 <ul className="uppercase p-4">
                     <li className="p-4 border-b border-gray-600" id="home">
-                        <Link to="hero" spy={true} smooth={true} offset={0} duration={100}>Home</Link>
+                        <Link to="navbar" spy={true} smooth={true} offset={0} duration={100}>Home</Link>
                     </li>
                     <li className="p-4 border-b border-gray-600" id="narration">Narration</li>
                     <li className="p-4 border-b border-gray-600" id="ceremonial">Ceremonial</li>
