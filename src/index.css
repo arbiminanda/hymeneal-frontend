@@ -5,3 +5,23 @@
 body{
   background-color: #000300;
 }
+
+.card {
+  border: 3px solid #fff;
+  background-color: #00df9a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.felicitation {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
