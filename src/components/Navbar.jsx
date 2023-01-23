@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import {Link} from "react-scroll"
 
 const Navbar = () => {
     const [nav, setNav] = useState(true)
@@ -7,6 +8,10 @@ const Navbar = () => {
     const handleNav = () => {
         setNav(!nav)
     }
+
+    const [click, setClick]= useState(false)
+
+    const closeMenu = () => setClick(false)
     
     return(
         <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white" id="navbar">
@@ -28,24 +33,36 @@ const Navbar = () => {
             </span>
             <h1 className="p-4 w-full text-3xl font-bold text-[#00df9a]" id="title">HYMENEAL</h1>
             <ul className="p-4 hidden md:flex">
-                <li className="p-4" id="home">Home</li>
+                <li className="p-4" id="home">
+                    <Link to="hero" spy={true} smooth={true} offset={0} duration={100} onClick={closeMenu}>Home</Link>
+                </li>
                 <li className="p-4" id="narration">Narration</li>
                 <li className="p-4" id="ceremonial">Ceremonial</li>
                 <li className="p-4" id="moments">Moments</li>
-                <li className="p-4" id="confirmation">Confirmation</li>
-                <li className="p-4" id="felicitation">Felicitation</li>
+                <li className="p-4" id="confirmation">
+                    <Link to="confirmation" spy={true} smooth={true} offset={600} duration={500} onClick={closeMenu}>Confirmation</Link>
+                </li>
+                <li className="p-4" id="felicitation">
+                    <Link to="felicitation" spy={true} smooth={true} offset={800} duration={500} onClick={closeMenu}>Felicitation</Link>
+                </li>
             </ul>
             <div onClick={handleNav} className="block md:hidden">
                 {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
             </div>
             <div className={!nav ? "fixed left-0 top-0 w-[50%] border-r border-r-gray-900 h-full bg-[#000300] ease-in-out duration-500" : "fixed left-[-100%]"}>
                 <ul className="uppercase p-4">
-                    <li className="p-4 border-b border-gray-600" id="home">Home</li>
+                    <li className="p-4 border-b border-gray-600" id="home">
+                        <Link to="hero" spy={true} smooth={true} offset={0} duration={100} onClick={closeMenu}>Home</Link>
+                    </li>
                     <li className="p-4 border-b border-gray-600" id="narration">Narration</li>
                     <li className="p-4 border-b border-gray-600" id="ceremonial">Ceremonial</li>
                     <li className="p-4 border-b border-gray-600" id="moments">Moments</li>
-                    <li className="p-4 border-b border-gray-600" id="felicitation">Felicitation</li>
-                    <li className="p-4 border-b border-gray-600" id="confirmation">Confirmation</li>
+                    <li className="p-4 border-b border-gray-600" id="confirmation">
+                        <Link to="confirmation" spy={true} smooth={true} offset={500} duration={500} onClick={closeMenu}>Confirmation</Link>
+                    </li>
+                    <li className="p-4 border-b border-gray-600" id="felicitation">
+                        <Link to="felicitation" spy={true} smooth={true} offset={800} duration={500} onClick={closeMenu}>Felicitation</Link>
+                    </li>
                 </ul>
             </div>
         </div>

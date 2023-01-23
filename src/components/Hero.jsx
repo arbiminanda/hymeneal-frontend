@@ -4,7 +4,7 @@ import Typed from "react-typed"
 
 const Hero = () => {
     return(
-        <div className="h-screen bg-cover flex items-center text-center justify-center max-h-[800px] mx-auto" style={{
+        <div className="h-screen bg-cover flex items-center text-center justify-center max-h-[800px] mx-auto hero" id="hero" style={{
             backgroundImage: `url(${Image})`
         }}>
             <div className="p-4">

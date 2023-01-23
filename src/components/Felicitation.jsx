@@ -33,7 +33,7 @@ const Felicitation = () => {
     }
 
     return(
-        <div className="mx-auto felicitation">
+        <div className="mx-auto felicitation mt-10" id="felicitation">
             <div className="text-center">
                 <h1 className="uppercase md:text-4xl sm:text-2xl text-xl font-bold text-[#00df9a]" id="confirmation-title">Felicitation</h1> <br />
             </div>

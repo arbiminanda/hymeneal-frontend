@@ -22,7 +22,7 @@ const Confirmation = () => {
     }
 
     return(
-        <div className="mx-auto px-10">
+        <div className="mx-auto px-10 confirmation" id="confirmation">
             <div className="text-center h-20 mt-20">
                 <h1 className="uppercase md:text-4xl sm:text-2xl text-xl font-bold nd:py-6 text-[#00df9a]" id="confirmation-title">Confirmation</h1>
             </div>
