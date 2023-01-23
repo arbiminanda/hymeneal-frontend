@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import Image from "./resources/hero_image.png"
 import Typed from "react-typed"
 
