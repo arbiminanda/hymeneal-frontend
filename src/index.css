@@ -29,4 +29,5 @@ body{
 .navbar {
   background: black;
   position: sticky;
+  top: 0;
 }
