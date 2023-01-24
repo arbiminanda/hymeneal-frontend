@@ -7,18 +7,18 @@ import MusicOff from "@mui/icons-material/MusicOff"
 import Sound from "./resources/sound.mp3"
 import {Howl} from "howler"
 
+let sound = new Howl ({
+    src: Sound,
+    loop: true,
+    volume: 0.5,
+})
+
 const Navbar = () => {
     const [nav, setNav] = useState(true)
 
     const handleNav = () => {
         setNav(!nav)
     }
-
-    let sound = new Howl ({
-        src: Sound,
-        loop: true,
-        volume: 0.5,
-    })
 
     const [soundButton, setSoundButton] = useState(true)
     
@@ -31,7 +31,7 @@ const Navbar = () => {
         setSoundButton(!soundButton)
     }
 
-   return(
+    return(
         <div className="navbar text-white" id="navbar">
             <div className="navbar-container flex items-center mx-auto px-4">
                 <span className="p-4" id="ring-icon">
