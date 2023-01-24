@@ -1,6 +1,11 @@
 import React, {useState} from "react"
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import {Link} from "react-scroll"
+import Fab from "@mui/material/Fab"
+import MusicNote from "@mui/icons-material/MusicNote"
+import MusicOff from "@mui/icons-material/MusicOff"
+import Sound from "./resources/sound.mp3"
+import {Howl} from "howler"
 
 const Navbar = () => {
     const [nav, setNav] = useState(true)
@@ -8,6 +13,16 @@ const Navbar = () => {
     const handleNav = () => {
         setNav(!nav)
     }
+
+    const [soundButton, setSoundButton] = useState(true)
+
+    const handleSoundButton = () => {
+        setSoundButton(!soundButton)
+    }
+
+    const sound = new Howl ({
+        src: Sound
+    })
 
     return(
         <div className="navbar text-white" id="navbar">
@@ -43,7 +58,7 @@ const Navbar = () => {
                         <Link to="felicitation" spy={true} smooth={true} offset={800} duration={500}>Felicitation</Link>
                     </li>
                 </ul>
-                <div onClick={handleNav} className="block md:hidden">
+                <div onClick={handleNav} className="block md:hidden px-4">
                     {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
                 </div>
                 <div className={!nav ? "fixed left-0 top-0 w-[50%] border-r border-r-gray-900 h-full bg-[#000300] ease-in-out duration-500" : "fixed left-[-100%]"}>
@@ -62,7 +77,13 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-            </div>    
+                <div onClick={handleSoundButton}>
+                    {!soundButton ? 
+                        <Fab color="secondary" className="px-4" onClick={() => sound.pause()}><MusicNote /></Fab> : 
+                        <Fab color="secondary" className="px-4" onClick={() => sound.play()}><MusicOff /></Fab>
+                    }
+                </div>
+            </div>
         </div>
     )
 }
