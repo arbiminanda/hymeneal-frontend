@@ -25,3 +25,8 @@ body{
 .slick-slide > div {
   margin: 0 10px;
 }
+
+.navbar {
+  background: black;
+  position: sticky;
+}
