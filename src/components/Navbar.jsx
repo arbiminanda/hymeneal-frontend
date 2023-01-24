@@ -14,17 +14,24 @@ const Navbar = () => {
         setNav(!nav)
     }
 
-    const [soundButton, setSoundButton] = useState(true)
+    let sound = new Howl ({
+        src: Sound,
+        loop: true,
+        volume: 0.5,
+    })
 
+    const [soundButton, setSoundButton] = useState(true)
+    
     const handleSoundButton = () => {
+        if (soundButton) {
+            sound.play()
+        } else {
+            sound.pause()
+        }
         setSoundButton(!soundButton)
     }
 
-    const sound = new Howl ({
-        src: Sound
-    })
-
-    return(
+   return(
         <div className="navbar text-white" id="navbar">
             <div className="navbar-container flex items-center mx-auto px-4">
                 <span className="p-4" id="ring-icon">
@@ -79,8 +86,8 @@ const Navbar = () => {
                 </div>
                 <div onClick={handleSoundButton}>
                     {!soundButton ? 
-                        <Fab color="secondary" className="px-4" onClick={() => sound.pause()}><MusicNote /></Fab> : 
-                        <Fab color="secondary" className="px-4" onClick={() => sound.play()}><MusicOff /></Fab>
+                        <Fab color="secondary" className="px-4"><MusicNote /></Fab> : 
+                        <Fab color="secondary" className="px-4"><MusicOff /></Fab>
                     }
                 </div>
             </div>
