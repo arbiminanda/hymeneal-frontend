@@ -10,7 +10,7 @@ body{
   border: 3px solid #fff;
   background-color: #00df9a;
   border-radius: 8px;
-  overflow: hidden;
+  z-index: 900;
 }
 
 .felicitation {
@@ -30,4 +30,5 @@ body{
   background: black;
   position: sticky;
   top: 0;
+  z-index: 950;
 }
