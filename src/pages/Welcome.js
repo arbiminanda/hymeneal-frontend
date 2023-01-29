@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Welcome = () => {
   const navigate = useNavigate();
-  const { to } = useParams();
+  const { guest } = useParams();
 
   const handleGoToHome = () => {
     navigate(`/home`);
@@ -34,7 +34,9 @@ const Welcome = () => {
         <p className="mt-20 md:text-3xl sm:text-2xl text-xl font-bold">
           Kindly Invite You,
         </p>
-        <p className="mt-5 md:text-4xl sm:text-3xl text-xl font-bold">{to}</p>
+        <p className="mt-5 md:text-4xl sm:text-3xl text-xl font-bold">
+          {guest}
+        </p>
         <button
           className="mt-20 rounded-xl p-2 btn bg-[#000000]"
           type="submit"
