@@ -1,8 +1,15 @@
 import React from "react";
 import Image from "./resources/welcome_image.png";
 import Typed from "react-typed";
+import { useNavigate } from "react-router-dom";
 
 const Welcome = () => {
+  const navigate = useNavigate();
+
+  const handleGoToHome = () => {
+    navigate(`/home`);
+  };
+
   return (
     <div
       className="h-screen bg-cover flex items-center text-center justify-center max-h-[800px] mx-auto hero"
@@ -27,7 +34,11 @@ const Welcome = () => {
           Kindly Invite You
         </p>
         <p className="mt-5 md:text-4xl sm:text-3xl text-xl font-bold">Guest</p>
-        <button className="mt-20 rounded-xl p-2 btn bg-[#000000]" type="submit">
+        <button
+          className="mt-20 rounded-xl p-2 btn bg-[#000000]"
+          type="submit"
+          onClick={() => handleGoToHome()}
+        >
           <p className="md:text-2xl sm:text-2xl text-xl text-white">
             Open Invitation
           </p>
