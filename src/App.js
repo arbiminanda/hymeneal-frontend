@@ -1,17 +1,13 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Confirmation from "./components/Confirmation";
-import Felicitation from "./components/Felicitation";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="font-sans">
-      <Navbar />
-      <Hero />
-      <Confirmation />
-      <Felicitation />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
