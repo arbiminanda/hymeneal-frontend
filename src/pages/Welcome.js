@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "./resources/welcome_image.png";
 import Typed from "react-typed";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Welcome = () => {
   const navigate = useNavigate();
+  const { to } = useParams();
 
   const handleGoToHome = () => {
     navigate(`/home`);
@@ -31,9 +32,9 @@ const Welcome = () => {
           SomeDay, DD Month YYYY
         </p>
         <p className="mt-20 md:text-3xl sm:text-2xl text-xl font-bold">
-          Kindly Invite You
+          Kindly Invite You,
         </p>
-        <p className="mt-5 md:text-4xl sm:text-3xl text-xl font-bold">Guest</p>
+        <p className="mt-5 md:text-4xl sm:text-3xl text-xl font-bold">{to}</p>
         <button
           className="mt-20 rounded-xl p-2 btn bg-[#000000]"
           type="submit"
