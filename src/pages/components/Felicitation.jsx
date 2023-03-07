@@ -13,7 +13,7 @@ const Felicitation = () => {
     }, [])
 
     const getConfirmationData = async () => {
-        const {data} = await axios.get('https://mocki.io/v1/311f608f-6aba-40a3-bd25-b8949fab99ec')
+        const {data} = await axios.get('https://hymeneal.000webhostapp.com/api/confirmation')
         setConfirmation(data)
     }
 
