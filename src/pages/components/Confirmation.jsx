@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import axios from "axios"
 
 const Confirmation = () => {
     
@@ -16,7 +17,10 @@ const Confirmation = () => {
     }
 
     const onSubmitHandler = (event) => {
-        console.log(formData)
+        axios.post("https://hymeneal.000webhostapp.com/api/confirmations", formData)
+        .then((response) => {
+            console.log(response)
+        });
         event.preventDefault()
         event.target.reset()
     }
