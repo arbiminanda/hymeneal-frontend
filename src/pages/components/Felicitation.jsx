@@ -14,7 +14,7 @@ const Felicitation = () => {
 
     const getConfirmationData = async () => {
         const {data} = await axios.get('https://hymeneal.000webhostapp.com/api/greetings')
-        setConfirmation(data)
+        setConfirmation(data.data)
     }
 
     const settings = {
