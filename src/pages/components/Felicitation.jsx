@@ -39,7 +39,7 @@ const Felicitation = () => {
             </div>
             <Slider {...settings}>
                 {confirmations.map(confirmation => (
-                    <div className="card text-white text-center">
+                    <div className="card text-white text-center" key={confirmation.id}>
                         <br/> <p className="md:text-xl sm:text-xl text-xl">{confirmation.greetings}</p> <br/>
                         <p className="md:text4xl sm:text-xl text-xl font-bold">-- {confirmation.name} --</p> <br/>
                     </div>

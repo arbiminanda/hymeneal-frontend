@@ -17,9 +17,10 @@ const Confirmation = () => {
     }
 
     const onSubmitHandler = (event) => {
-        axios.post("https://hymeneal.000webhostapp.com/api/confirmations", formData)
+        axios.post("https://hymeneal.000webhostapp.com/api/confirmation", formData)
         .then((response) => {
             console.log(response)
+            alert(`Berhasil melakukan konfirmasi.`);
         });
         event.preventDefault()
         event.target.reset()
