@@ -21,6 +21,7 @@ const Confirmation = () => {
         .then((response) => {
             console.log(response)
             alert(`Berhasil melakukan konfirmasi.`);
+            window.location.reload(false);
         });
         event.preventDefault()
         event.target.reset()
