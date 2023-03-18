@@ -13,7 +13,7 @@ const Felicitation = () => {
     }, [])
 
     const getConfirmationData = async () => {
-        const {data} = await axios.get('https://smartfarm-dev.ganesalens.id/api/greetings?sort=desc')
+        const {data} = await axios.get('https://smartfarm-dev.ganesalens.id/api/greetings?sort=random')
         setConfirmation(data.data)
     }
 
