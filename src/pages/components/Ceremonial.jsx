@@ -40,37 +40,37 @@ const Ceremonial = () => {
     })
 
     return(
-        <section className="bg-cover flex max-h-[600px] text-white mx-auto ceremonial" id="ceremonial">
-            <section className="timer">
-                <div>
-                    <span className="">
-                        <h2 className="uppercase md:text-4xl sm:text-2xl text-xl font-bold nd:py-6">Reckon Up to The Ceremonial</h2>
-                        <p>Compute to a really ceremonial that would never be forgotten</p>
-                    </span>
+        <div className="w-full text-white ceremonial" id="ceremonial">
+            <div className="mx-auto grid md:grid-cols-2">
+                <div className="w-[500px] mx-auto my-auto text-center">
+                    <h2 className="uppercase md:text-4xl sm:text-2xl text-xl font-bold">Reckon Up to The Ceremonial</h2>
+                    <p>Compute to a really ceremonial that would never be forgotten</p>
                 </div>
-                <div>
-                    <section>
-                        <p>{timerDays}</p>
-                        <p><small>Days</small></p>
-                    </section>
-                    <span>:</span>
-                    <section>
-                        <p>{timerHours}</p>
-                        <p><small>Hours</small></p>
-                    </section>
-                    <span>:</span>
-                    <section>
-                        <p>{timerMinutes}</p>
-                        <p><small>Minutes</small></p>
-                    </section>
-                    <span>:</span>
-                    <section>
-                        <p>{timerSeconds}</p>
-                        <p><small>Seconds</small></p>
-                    </section>
+                <div className="timer flex flex-col">
+                    <div>
+                        <section>
+                            <p>{timerDays}</p>
+                            <p><small>Days</small></p>
+                        </section>
+                        <span>:</span>
+                        <section>
+                            <p>{timerHours}</p>
+                            <p><small>Hours</small></p>
+                        </section>
+                        <span>:</span>
+                        <section>
+                            <p>{timerMinutes}</p>
+                            <p><small>Minutes</small></p>
+                        </section>
+                        <span>:</span>
+                        <section>
+                            <p>{timerSeconds}</p>
+                            <p><small>Seconds</small></p>
+                        </section>
+                    </div>
                 </div>
-            </section>
-        </section>
+            </div>    
+        </div>
     )
 }
 
