@@ -40,10 +40,10 @@ const Ceremonial = () => {
     })
 
     return(
-        <div className="w-full text-white ceremonial" id="ceremonial">
+        <div className="text-white ceremonial" id="ceremonial">
             <div className="mx-auto grid md:grid-cols-2">
-                <div className="w-[500px] mx-auto my-auto text-center">
-                    <h2 className="uppercase md:text-4xl sm:text-2xl text-xl font-bold">Reckon Up to The Ceremonial</h2>
+                <div className="mx-auto my-auto text-center">
+                    <h2 className="uppercase md:text-4xl sm:text-1xl text-md font-bold">Reckon Up to The Ceremonial</h2>
                     <p>Compute to a really ceremonial that would never be forgotten</p>
                 </div>
                 <div className="timer flex flex-col">

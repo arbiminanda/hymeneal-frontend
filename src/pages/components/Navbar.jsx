@@ -50,7 +50,7 @@ const Navbar = () => {
                         </g>
                     </svg>
                 </span>
-                <h1 className="p-4 w-full text-3xl font-bold text-[#00df9a]" id="title">HYMENEAL</h1>
+                <h1 className="p-4 w-full text-2xl font-bold text-[#00df9a]" id="title">HYMENEAL</h1>
                 <ul className="p-4 hidden md:flex">
                     <li className="p-4" id="home">
                         <Link to="hero" spy={true} smooth={true} offset={0} duration={100}>Home</Link>
